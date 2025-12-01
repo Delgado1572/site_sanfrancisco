@@ -1,0 +1,495 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+section {
+  margin-bottom: 50px;
+}
+
+h1,
+h2,
+h3 {
+  color: #004aad;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1.1em;
+  max-width: 900px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 20px auto;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+ul li {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  font-weight: 500;
+  color: #004aad;
+}
+
+/* --- CABECARALHUS --- */
+header {
+  background-color: #004aad;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 80px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logosa {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.logosa img {
+  max-height: 70px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  font-weight: bold;
+}
+
+nav ul li {
+  padding: 0;
+  margin: 0;
+}
+
+nav li a {
+  color: #004aad;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s;
+  padding: 8px 12px;
+  border-radius: 5px;
+  display: block;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav li a:hover {
+  background: #003c89;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* CHICOTE/ESCRAVOS OU MELHOR SETORES/EQUIPE */
+main section.cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 730px;
+  margin: 40px auto;
+}
+
+main section.cards .card {
+  width: 350px;
+  min-height: 220px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+main section.cards .card h3 {
+  color: #004aad;
+  font-size: 1.4em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+main section.cards .card p {
+  font-size: 1em;
+  color: #444;
+  margin: 0;
+  text-align: left;
+}
+
+main section.cards .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+/*SALINHA DE BABA OVO E PUXA SACO */
+.team-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 920px;
+  margin: 40px auto;
+}
+
+.team-container .card {
+  width: 280px;
+  min-height: auto;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.team-container .card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #004aad;
+  margin-bottom: 15px;
+}
+
+.team-container .card:hover {
+  transform: translateY(-10px);
+}
+
+/*OUVIDORIA DE CLIENTE OU FORNECEDOR CHATO*/
+.form-contato {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form-contato input,
+.form-contato textarea {
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  width: 100%;
+}
+
+.form-contato button {
+  background-color: #004aad;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-contato button:hover {
+  background-color: #003c89;
+}
+
+/* GIRA GIRA DO SOBRE*/
+.carrossel {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto 50px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.carrossel-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+/* ESSA BOSTA TAVA DANDO ERRO COM O SLIDE DE MARCAS */
+.banner-slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  animation: fade 1.5s;
+}
+
+.banner-slide.active {
+  display: block;
+}
+
+.banner-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Animação Fade */
+@keyframes fade {
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
+}
+
+/* BOTÃO VAI E VEM  */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots-container {
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), transparent);
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active,
+.dot:hover {
+  background-color: #004aad;
+}
+
+/* RODA REGO DO SITE */
+footer {
+  background-color: #004aad;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+.slider {
+  height: 200px;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+}
+
+.slide-track {
+  display: flex;
+  background: white;
+}
+
+.slide-track:hover {
+  animation-play-state: paused;
+}
+
+.slider .slide {
+  height: 200px;
+  min-width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  perspective: 100px;
+}
+
+.slider .slide img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.hero-video {
+  width: 100%;
+  height: 60vh;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 50px;
+  background-color: #000;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.intro-text {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: white;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+}
+
+.intro-text h1 {
+  color: #004aad;
+  font-size: 2.5em;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  font-size: 1.2em;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+}
+
+/* Botão Principal */
+.btn-main {
+  display: inline-block;
+  padding: 12px 35px;
+  background-color: #004aad;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0, 74, 173, 0.3);
+}
+
+.btn-main:hover {
+  background-color: #003c89;
+  transform: translateY(-2px);
+}
+
+
+.slider .slide img:hover {
+  transform: scale(1.1);
+}
+
+/* GIRA GIRA DAS MARCAS  */
+.bomboniere-track {
+  width: calc(250px * 22);
+  animation: scroll-bomboniere 55s linear infinite;
+}
+
+@keyframes scroll-bomboniere {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 11));
+  }
+}
+
+.perfumaria-track {
+  width: calc(250px * 20);
+  animation: scroll-perfumaria 50s linear infinite;
+}
+
+@keyframes scroll-perfumaria {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 10));
+  }
+}
+
+.atacado-track {
+  width: calc(250px * 24);
+  animation: scroll-atacado 60s linear infinite;
+}
+
+@keyframes scroll-atacado {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-250px * 12));
+  }
+}

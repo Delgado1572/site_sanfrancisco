@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contato - Sanfrancisco Distribuidora</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <script src="../js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function () {
+      emailjs.init("SEU_USER_ID_AQUI"); //  FALTA O EMALS ID
+    })();
+
+    function enviarEmail(e) {
+      e.preventDefault();
+
+      emailjs.sendForm("SEU_SERVICE_ID", "SEU_TEMPLATE_ID", e.target)
+        .then(() => {
+          alert("Mensagem enviada com sucesso! Entraremos em contato em breve.");
+          e.target.reset();
+        }, (error) => {
+          console.error("Erro:", error);
+          alert("Ocorreu um erro ao enviar. Tente novamente mais tarde.");
+        });
+    }
+  </script>
+</head>
+
+<body>
+  <header>
+    <div class="logosa">
+      <img src="/Logos/LOGO SANFRANCISCO.png" alt="Logo Sanfrancisco Distribuidora">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Início</a></li>
+        <li><a href="./setores.html">Setores</a></li>
+        <li><a href="./marcas.html">Marcas</a></li>
+        <li><a href="./equipe.html">Equipe</a></li>
+        <li><a href="./contato.html">Contato</a></li>
+        <li><a href="./sobre.html">Sobre Nós</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Fale Conosco</h1>
+    <p>Preencha o formulário abaixo e nossa equipe retornará o mais breve possível.</p>
+
+    <form class="form-contato" onsubmit="enviarEmail(event)">
+      <input type="text" name="nome" placeholder="Seu nome" required />
+      <input type="email" name="email" placeholder="Seu e-mail" required />
+      <input type="text" name="assunto" placeholder="Assunto" />
+      <textarea name="mensagem" placeholder="Mensagem" rows="5" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+
+    <section class="info-contato">
+      <h2>Outros Canais</h2>
+      <p>📍 Endereço: Av. Auspicio Valgueiro Barros, 441 - Centro, Petrolândia/PE</p>
+      <p>📞 Telefone: (87) 9 9999-9999</p>
+      <p>✉️ E-mail: ?????</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Sanfrancisco Distribuidora - Todos os direitos reservados
+  </footer>
+</body>
+
+</html>
